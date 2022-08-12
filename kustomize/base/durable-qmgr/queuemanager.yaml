@@ -8,10 +8,13 @@ metadata:
 spec:
   queueManager:
     storage:
-      persistedData:
-        enabled: true
       queueManager:
         enabled: true
+        class: ibmc-block-gold
         type: persistent-claim
+      persistedData:
+        enabled: true
+        class: ibmc-block-gold
       recoveryLogs:
         enabled: true
+        class: ibmc-block-gold
